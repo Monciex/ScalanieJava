@@ -1,0 +1,34 @@
+class Main {
+
+    public static void main(String[] args) {
+
+        int[] wek = {13, 57, 89, 95};
+        int[] wek1 = {25, 56, 58, 67, 69, 70, 76};
+        int size = wek.length + wek1.length;
+
+        for (int i = 0, j = 0; i + j < size; ) {
+
+            if(i < wek.length && j< wek1.length) {
+
+                if (wek[i] < wek1[j]) {
+                    System.out.println(wek[i]);
+                    i++;
+                } else {
+                    System.out.println(wek1[j]);
+                    j++;
+                }
+            }
+            else {
+
+                if (j < wek1.length) {
+                    System.out.println(wek[i]);
+                    i++;
+
+                } else if (i < wek.length) {
+                    System.out.println(wek[j]);
+                    j++;
+                }
+            }
+        }
+    }
+}
